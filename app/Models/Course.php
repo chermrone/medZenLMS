@@ -11,4 +11,14 @@ class Course extends Model
     protected $fillable = [
         'title'
     ];
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
+    public function part()
+    {
+        return $this->belongsTo(Part::class);
+    }
 }

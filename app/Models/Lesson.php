@@ -13,4 +13,9 @@ class Lesson extends Model
         'video_url',
         'video_title'
     ];
+
+    public function parts()
+    {
+        return $this->hasMany(Part::class);
+    }
 }

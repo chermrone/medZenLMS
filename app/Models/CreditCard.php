@@ -12,4 +12,9 @@ class CreditCard extends Model
         'expiration_date',
         'number',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

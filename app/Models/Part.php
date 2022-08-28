@@ -11,4 +11,14 @@ class Part extends Model
     protected $fillable = [
         'title'
     ];
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class);
+    }
 }
